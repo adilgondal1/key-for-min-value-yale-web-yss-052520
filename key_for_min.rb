@@ -9,9 +9,13 @@ def key_for_min_value(name_hash)
     if array.size == 0 
       array.push(key)
       array.push(value)
-    elsif value < array[1]
-    
-    
+    else
+      if value < array[1]
+        array[0] = key
+        array[1] = value
+      end
+    end
+  array[0]
 end
 
 #p key_for_min_value({})
